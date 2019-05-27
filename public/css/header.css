@@ -1,0 +1,63 @@
+div.main{
+ width:1325px;
+ height: 125px;
+ position: relative;
+ margin:0px  auto
+}
+#headerTop{
+  width: 240px;
+ height: 120px;
+
+
+}
+
+
+.hearder{
+ font-size: 12px;
+
+}
+
+.input-group{
+ width: 450px;
+ height: 75px;
+ margin-top: 30px;
+ display: flex;
+justify-content: space-between ;
+
+}
+.btn{
+ width: 50px;
+ border-radius:45% ;
+ font-size: 8px;
+
+
+}
+.herderend{
+ width: 430px;
+ height: 66px;
+
+
+}
+.herderend a{
+ font-size: 10px;
+ text-decoration: none;
+ color: grey;
+
+
+}
+.showNav{
+  margin-left:285px;
+ height: 35px;
+  width: 1342px;
+  border: solid white;
+ background-color: #0051ba;
+ }
+.showNav a{
+    font-size: 13px;
+ text-decoration: none;
+color: white;
+ font-weight: bold;
+
+}
+
+

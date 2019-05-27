@@ -1,0 +1,251 @@
+.my_header{
+    width: 100%;
+    height: 150px;
+}
+ul,nav-item{
+list-style: none;
+}
+.details{
+margin-left: 270px;
+margin-top: 20px;
+}
+/* 评分 */
+.svg-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    fill:#fff;
+    vertical-align: middle
+}
+.product-rating svg {
+    width: 2rem;
+    height: 2rem;
+
+}
+/*放大镜的样式*/
+
+.card{
+    position: relative;  
+    height: 650px;
+    border: #fff
+   
+}
+.card-body{
+  width: 500px;
+  height: 150px;
+position: relative;
+}
+
+.preview>.card>.card-body>div{
+position: absolute;
+    width:500px;
+    overflow:hidden; 
+     display: flex; 
+     justify-content:space-between 
+
+     
+}
+
+  .preview>.card>.card-body>div>ul{
+      width: 900px;
+    transition:all .5s linear;
+   display: flex;
+    padding: 12px; 
+  }
+  .preview>.card>.card-body>div>ul>li{
+    width:120px; height:120px;
+   
+  
+  }
+  .preview>.card>.card-body>div>ul img{
+    width:115px; height:115px;
+  }
+  .preview>.card>.card-body>div>ul img:hover{
+    border:1px solid  greenyellow;
+  }
+  /*中图片*/
+  .preview>div>img{width:520px;height:650px;}
+  #mask{
+      position: absolute;
+    width:200px; height:200px;
+    background-color:#ffa;
+    opacity:.5;
+  }
+  #super-mask{
+  position: absolute;
+    width:550px; height:550px;
+    opacity: 0   
+  }
+  #div-lg{
+    position: absolute;
+    width:350px;
+     height:350px;   
+    border: 1px solid  gold;
+    margin-left:550px;  
+  }
+
+  .next{
+   margin-left:480px;
+   position: absolute;
+   margin-top:60px
+  
+  }
+  .prev{
+ left: -1px;
+   position: absolute;
+    margin-top: 60px;
+  }
+  
+/* 右边的样式 */
+.active-2{
+margin-left: 120px;
+width: 450px;
+}
+.ac1{
+    padding-left: 10px;
+   padding-top:13px ;
+    height:48px ;
+    border: solid  1px silver;
+     font-size: 14px;
+     color: black;
+}
+.num{
+    margin-top: 10px;
+    display: flex;
+    font-size: 15px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.button{
+    height: 48px;
+  width: 100%;
+  }
+  /* 二楼 */
+  .mydetail a{
+    color:black;
+    margin-left: 15px;
+
+}
+
+.mydetail{
+    clear: both;
+    padding-top: 100px;
+}
+.d-flex{
+    position: relative;
+    z-index: 100;
+}
+.d-flex a{
+    text-decoration: none
+}
+#content1,#content2,#content3,#content4{
+    width: 100%;
+    height: 200px;
+  position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff
+}
+.h6li{
+    float: right;
+}
+.h6li   li{
+    font-size: 13px;
+     line-height: 21px;
+}
+
+.h6li  h6{
+     font-size: 13px;
+     font-weight: bold;
+      margin-top: 4px;
+}
+#container{
+    position: relative;
+    height: 250px;
+}
+/* 最后一楼样式 */
+.main-div{
+    width: 1060px;
+    height: 260px;
+    position: relative;
+   overflow: hidden;
+}
+
+.main-div  ul{
+width: 200%;
+list-style: none;
+position: absolute;
+display: flex
+} 
+
+
+
+
+.main-div  ul  li a{
+    text-decoration: none;
+    color:black;
+   text-align: center;
+   line-height: 5px;
+   font-weight: bold
+
+}
+.main-div ul li{
+    margin-left: 10px;
+    width: 280px;
+   
+}
+.main-div ul li img{
+    width: 80%;
+}
+/* footer样式 */
+.my_footer{
+    width: 100%;
+    height: 300px;
+}
+/*提示登陆 */
+.model>.model-login{
+background:#fff;
+width: 400px;
+height: 100px;
+position:fixed;
+left: 50%;
+top:50%;
+margin-left: -200px;
+margin-top: -50px;
+opacity: 0.9;
+
+}
+.model>.model-mask{
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;    
+    position: fixed;
+    top:0;
+   
+}
+.model-close{
+position: absolute;
+text-align: center;
+width: 20px;
+height: 20px;
+background: #DF3033;
+cursor: pointer;
+left:380px;
+
+}
+.model-btn{
+position: absolute;
+left:50%;
+top:50%;
+font-size: 20px;
+cursor: pointer;
+ display: inline-block; 
+width: 80px;
+height: 30px;
+margin-left: -30px;
+margin-top: -10px;
+}
+
+
+a{color:#666;
+text-decoration: none;
+}

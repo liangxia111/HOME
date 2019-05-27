@@ -1,0 +1,41 @@
+    $("#all_room").next().mouseenter(function(){
+        $("#all_room").css("height","443px")}
+    ).add("#all_room")
+    .mouseleave(function(e) {
+        let tar=e.target;
+        if(tar.nodeName!=="A"&&tar.nodeName!=="UL")
+         $("#all_room").css("height","0");
+});
+$(()=> {
+    if(location.pathname.endsWith("cart.html")){
+        $.get("data/user/islogin.php").then(data=> {
+            if (data.code === 0) {
+                alert("请先登录!");
+                location = "login.html";
+            }
+        })
+    }
+
+    $.getJSON("data/user/isLogin.php").then(data=>{
+        let $btn1=$("#login2");
+
+        if(data.code==0) {
+            $btn1.html("请登录");
+        }
+        else if(data.code==1){
+            console.log(data.code);
+            let $btn2=$("#loginname>p");
+            let $btn3=$("#logout");
+            $btn1.html("已登录");
+            $btn2.html(`欢迎${data.uname},不是${data.uname}?<a style="cursor:pointer">请看这里</a>`);
+            $btn3.css("display","inline");
+        }
+    })
+    $("#logout").click(function(){
+        $.get("data/user/logout.php").then(()=>{
+            $("#logout").css("display","none");
+        });
+        });
+    }
+);
+//location.reload(true);

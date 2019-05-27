@@ -1,0 +1,40 @@
+$(
+    $.ajax({
+        type:"get",
+        url:"header.html",
+    }).then(html=>{
+        $("#header").html(html);
+    })
+);
+$(
+    $.ajax({
+        type:"get",
+        url:"footer3.html",
+    }).then(html=>{
+        $("#footer").html(html);
+    })
+);
+
+
+    //切换颜色
+    function changeColor(btn)
+{
+    btn.click(function () {
+        if ($(this).next().css("display") === "none")
+            $(this).next().css("display", "block");
+        else
+            $(this).next().css("display", "none");
+    })
+}
+changeColor($(".product_changcolor"));
+
+    //切换图片
+    $(".products_simg").on("click","img",function(){
+        let bigp=$(".products_bimg");
+    $(this).css("border-color","#0aa1ed").siblings().css("border-color","#ddd");
+    let n=$(this).prevAll().length;
+    console.log(bigp);
+    bigp.css("left",`${-n*500}px`);
+    });
+//切换产品类型
+

@@ -1,0 +1,179 @@
+$(()=> {
+    $(`<link rel="stylesheet" href="css/header.css">`).appendTo(document.head);
+$("#header").load("header.html");
+});
+//banner 轮播效果
+function banner1() {
+    let bannerf=document.getElementsByClassName("bannerf")[0];
+    bannerf.style.transitionProperty = "all";
+    bannerf.style.transitionTimingFunction = "ease-out";
+    if(bannerf.parentNode.nextElementSibling !==null){
+        bannerf.className = "";
+        let next=bannerf.parentNode.nextElementSibling.firstElementChild;
+        bannerf.style.transitionDuration="2s";
+        next.className="bannerf";
+    }
+    else{
+        let next=bannerf.parentNode.parentNode.firstElementChild.firstElementChild;
+        bannerf.className = "";
+        next.style.transitionDuration="0s";
+        next.className="bannerf";}
+}
+let timer=setInterval(banner1,7000);
+
+//放大效果
+function washroom() {
+    let x = document.getElementsByClassName("h2_new1");
+    x[0].style.transform = "scale(1.1)";
+
+}
+function washroom1() {
+    let p = document.getElementsByClassName("h2_new1");
+    for (let i=0;i<p.length;i++)
+        p[i].style.transform = "scale(1.0)";
+
+}
+function washroom2() {
+    let x = document.getElementsByClassName("h2_new1");
+    x[1].style.transform = "scale(1.1)";
+
+}
+function washroom3() {
+    let x = document.getElementsByClassName("h2_new1");
+    x[2].style.transform = "scale(1.1)";
+
+}
+function washroom4() {
+    let x = document.getElementsByClassName("h2_new1");
+    x[3].style.transform = "scale(1.1)";
+
+}
+//物品轮播效果：已废
+
+
+
+
+(()=>{
+    let x=0;
+    //变更图片方法,set及rf,lf点击事件共享
+    function changepic(div){
+        if(x<= -3180)
+            x=0;
+        x = x - 1060;
+        div.css("left", x);
+        return div;
+    }
+    $(".index3").on("click","img.index_lf,img.index_rf",function(e){
+        e.preventDefault();
+        let div=$(this).parent().parent().parent().find("div.index6");
+        if ($(this).attr("class").indexOf("lf") < 0) {
+            changepic(div);
+            // console.log(x);
+        }
+        else {
+            if(x>= 0)
+                x=-3180;
+            x = x + 1060;
+            //console.log(x);
+            div.css("left", x);
+        }
+    });
+//主页物品轮播
+    let divs=$("div.index6");
+        function task() {
+            changepic(divs);
+          //  divs.css("transition","all 2s linear")
+        }
+            let timer=setInterval(task, 3000);
+            divs.on("mouseenter",()=>{
+                clearInterval(timer);
+                timer=null;
+            }).on("mouseleave",()=> {
+                timer=setInterval(task,3000);
+            })
+})();
+//底部轮播效果
+(()=>{
+let x=0;
+function task(){
+    x=x-700;
+    let div=document.getElementsByClassName("index7")[0];
+    if(x!== -2800) {
+        div.style.transform = `translateX(${x}px)`;
+        div.style.transitionProperty="all";
+        div.style.transitionDuration="1s";
+        div.style.transitionTimingFunction="ease-out"
+    }else{
+        x=0;
+        div.style.transitionDuration="0s";
+        div.style.transform = `translateX(${x}px)`;
+    }
+}
+setInterval(task, 4000);})();
+//底部返回按钮移入事件
+$(()=>{
+let div=document.getElementsByClassName("backtop")[0];
+let tar=document.querySelector(".backtop>div:last-child");
+div.onmouseenter=function(){
+    tar.style.display="block";
+};
+div.onmouseleave=function () {
+    tar.style.display="none";
+};});
+window.onscroll=function () {
+    let totop=document.getElementsByClassName("backtop")[0];
+    let scrollTop=document.documentElement.scrollTop
+    ||document.body.scrollTop;
+    if(scrollTop>=500)
+    totop.style.display="block";
+    else
+        totop.style.display="none";
+};
+//广告弹窗
+$(()=>{
+let msg=document.getElementById("msg");
+window.onload=function(){
+    msg.style.bottom = "0px";
+};
+msg.children[0].onclick=function () {
+    this.parentNode.style.bottom="-200px";
+    setTimeout(()=>{
+        this.parentNode.style.bottom="0px";
+    },1000+15000)
+};});
+//广告弹窗事件
+$(()=>{
+function task1() {
+    let date = new Date();
+    let datems = date.getMinutes();
+    let datess = date.getSeconds();
+    datems = 60 - datems;
+    datess = 60 - datess;
+    let div = document.getElementById("msg");
+    div = div.firstElementChild.nextElementSibling;
+    div.innerHTML = `距下场抢购还有<br/><span>${datems}</span>分<span>${datess}</span>秒`;
+}
+setInterval(task1,1000);});
+
+let canMove=false;
+let pop=document.getElementById("pop");
+pop.onmousedown=function(e){
+    canMove=true;
+    offsetX=e.offsetX;
+    offsetY=e.offsetY;
+};
+pop.onmouseup=pop.onmouseleave=function () {
+    canMove=false;
+};
+document.body.onmousemove=function (e) {
+    if(canMove){
+        let top=e.clientY-offsetY;
+        let left=e.clientX-offsetX;
+        pop.style.top=top+"px";
+        pop.style.left=left+"px";
+    }
+};
+$(()=> {
+    $(`<link rel="stylesheet" href="css/footer3.css">`).appendTo(document.head);
+    $("#footer").load("footer3.html");
+});

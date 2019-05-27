@@ -1,0 +1,128 @@
+.action{
+    width: 1060px;
+    height: auto;
+    margin-left: 430px;
+}
+.active-1{
+
+    width: 1060px;
+    height: 170px;
+    display:flex;
+    justify-content:space-between
+}
+.div1{
+    width: 1060px;
+    height: 170px;
+    display:flex;
+    justify-content:space-between
+
+
+
+}
+.div1>div{
+   
+    width: 255px;
+    height: 300px; 
+}
+.div1>div>div{
+    width: 255px;   
+}
+
+
+.active-1>div{
+
+    width: 255px;
+    height: 330px;
+}
+.active-1>div>div{
+  width: 255px;
+}
+
+.center  a{
+  margin-left: 900px;
+}
+
+  .sum{
+   width: 255px;
+   height: 300px;
+   top:200px;
+    margin-left:400px;
+   
+  } 
+
+.sum a{
+color:black;
+text-decoration: none;
+
+text-align: center
+
+
+}
+
+.children{
+ width: 400px;
+ position: relative;
+}
+.child{
+ position: relative;
+   margin-left: 600px;
+   margin-top: -220px
+   }
+ 
+.child  h5{
+    font-weight: bold ;
+    font-size: 25px;
+    margin-left: 300px;
+    margin-top: -30px;
+     line-height: 8px;
+     color:orange
+}
+
+.child  button{
+  margin-left:300px; 
+   font-weight: bold; 
+   background:#0a7bd2
+}
+.child p:nth-child(n){
+
+color:orange
+}
+
+.center p{
+ font-size: 13px
+}
+.shop{
+width: 1060px;
+position: relative;
+margin-bottom: 50px;
+height: 300px;
+overflow: hidden;
+margin-left: -50px
+}
+.list ul{
+height: 300px;
+position: absolute;
+display: flex;
+justify-content: space-between;
+list-style: none;
+
+}
+.list ul li{
+height: 200px;
+width: 210px;
+text-align: center;
+line-height: 10px;
+margin-left: 0
+}
+.acive-1  a{
+  text-decoration:none ;
+    color: black;
+}
+.my_footer{
+    width: 100%;
+    height:300px;
+}
+.my_header{
+    width: 100%;
+    height: 150px;
+}

@@ -1,0 +1,83 @@
+.login-1{
+    width: 1060px;
+    height: 560px;
+    margin: auto;
+    background-color: #ccc;
+    position: relative;
+		
+}
+
+.action {
+    width:560px ;
+    height: 450px;
+    float: left;
+    margin-left: 160px;
+    margin-top: 60px;
+
+}
+.register1 {
+     width:560px ;
+    height: 450px;
+    position: absolute;
+    float: right;
+    margin-left: 600px;
+    margin-top: 60px;
+}
+.login-1 form input{
+    margin-top: 30px;
+     width: 50%;
+    background-color:#ccc;
+     border: none;
+		border:1px  solid   white
+ 
+}
+
+
+.login-1 span{
+    color: black;
+    font-size:25px ;
+}
+/* 页面初始，验证消息不显示 */
+.vali_info{
+    display:none; 
+     color:red;
+    height: 10px; 
+
+}
+.txt_focus{/*当文本框获得焦点时穿上*/
+	border-top:2px solid red;
+	border-left:2px solid red;
+}/*当文本框失去焦点时脱下*/
+
+.vali_success,.vali_fail{
+	background-repeat:no-repeat;
+  background-position:left center;
+	display:block;
+}
+/* 验证消息：验证通过时的样式 */
+.vali_success{
+    background-image:url("../img/ok.png");
+	width:25px;height:20px;
+    overflow:hidden;
+    padding-left: 35px;
+}
+/* 验证消息：验证失败时的样式 */
+.vali_fail{
+    background-image:url("../img/err.png");
+    background-color:#ddd;
+    color:Red;
+    padding-left: 35px;
+    width: 50%;
+ 
+
+
+}
+.my_header{
+    width: 100%;
+  height:168px;
+}
+.my_footer{
+    width: 100%;
+    height:298px;
+}
+

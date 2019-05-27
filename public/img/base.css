@@ -1,0 +1,39 @@
+/*设置通用样式*/
+body{
+    font:12px "simhei",Arial;
+    color:#666;
+    margin:0;
+    padding:0;
+    background:white;
+}
+
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:#666;
+}
+a:hover{
+    color:#0aa1ed;
+}
+img{
+    vertical-align:middle;
+}
+.lf{
+    float:left;
+}
+.rf{
+    float:right;
+}
+.clear:after{
+    display:block;
+    content:"";
+    clear:both;
+}
+div.main{
+    width:1342px;
+    margin:0 auto;
+}
